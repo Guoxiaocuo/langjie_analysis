@@ -1,14 +1,7 @@
 # from bs4 import BeautifulSoup
 import requests
-# import os
 import json
 import pandas as pd
-# from wordcloud import WordCloud, ImageColorGenerator
-# import imageio
-# import seaborn as sns
-# import matplotlib.pyplot as plt
-# import jieba
-# import collections # 词频统计库
 
 
 # 提取某一期的弹幕
