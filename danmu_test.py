@@ -13,7 +13,7 @@ import pandas as pd
 
 # 提取某一期的弹幕
 def get_danmu(num1, num2, page):
-    url = 'https://bullet-ws.hitv.com/bullet/2020/09/20/{}/{}/{}.json'
+    url = 'https://bullet-ws.hitv.com/bullet/2020/09/19/{}/{}/{}.json'
     danmuurl = url.format(num1, num2, page)
     res = requests.get(danmuurl)
     res.encoding = 'utf-8'
@@ -52,8 +52,7 @@ def count_danmu():
 
 def main():
     danmu_end = []
-    # 爬前四集，所以设置了循环4次
-    for j in range(1):
+    for j in range(10):
         danmu_end.extend(count_danmu())
     df = pd.DataFrame(danmu_end)
     df.to_excel('danmu_0619.xlsx')
