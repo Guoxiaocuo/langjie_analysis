@@ -45,7 +45,7 @@ def count_danmu():
 
 def main():
     danmu_end = []
-    for j in range(10):
+    for j in range(9):
         danmu_end.extend(count_danmu())
     df = pd.DataFrame(danmu_end)
     df.to_excel('danmu_0619.xlsx')
