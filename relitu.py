@@ -13,12 +13,3 @@ sns.heatmap(cov_sisiter_0,linewidths=0.05, annot=True, vmax=1, square=True, cmap
 # ax.set_title('图X 特征变量的相关系数')
 plt.show()
 
-np.set_printoptions(suppress=True)
-pca = PCA(n_components=0.85)
-pca_feature = pca.fit(feature_scale) # 主成分降维，Input contains NaN, infinity or a value too large for dtype('float64')
-pca_number = pca_feature.n_components_ # 降维之后的主成分个数
-zaihejuzhen = pd.DataFrame(pca_feature.components_)
-zaihejuzhen.to_excel('E:\python_exercise\lunwen\zaihejuzhen.xlsx')
-plt.subplots(figsize=(37,9))
-sns.heatmap(zaihejuzhen, annot=True, vmax=1, square=True, cmap="Blues")
-plt.show()
